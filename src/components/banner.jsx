@@ -2,60 +2,48 @@ import { Separator } from "@heroui/react";
 
 const Banner = () => {
     return (
-        <div className="bg-[url('/assets/Banner.png')] bg-no-repeat bg-cover bg-center text-white flex flex-col justify-between items-center gap-5 h-175">
-            <div className="p-10 text-center flex justify-center flex-col items-center gap-3.5 flex-1">
-                <h1 className="text-7xl">
+        <div className="relative bg-[url('/assets/Banner.png')] bg-no-repeat bg-cover bg-center text-white min-h-[700px] flex flex-col">
+            <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/50" />
+
+            <div className="relative flex-1 flex flex-col justify-center items-center px-4 text-center">
+                <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
                     Discover Your <br /> Next Adventure
                 </h1>
 
-                <p className="text-2xl">
+                <p className="text-lg md:text-2xl text-white/90 max-w-2xl mb-8">
                     Explore breathtaking destinations and create unforgettable memories
                     with our curated travel experiences.
                 </p>
 
-                <div className="flex gap-5">
-                    <button className="uppercase bg-cyan-500 px-5 py-3 cursor-pointer">
+                <div className="flex gap-4">
+                    <button className="uppercase bg-teal-600 hover:bg-teal-700 px-8 py-3.5 rounded-lg font-semibold text-sm tracking-wide transition-all duration-200 cursor-pointer">
                         Explore Now
                     </button>
-
-                    <button className="uppercase px-5 py-3 bg-white/50 cursor-pointer">
-                        View Destination
+                    <button className="uppercase px-8 py-3.5 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-lg font-semibold text-sm tracking-wide transition-all duration-200 cursor-pointer">
+                        View Destinations
                     </button>
                 </div>
             </div>
 
-            <div className="bg-white/30 flex justify-between gap-5 w-full items-center text-[18px]">
-
-                <div className="px-3">
-                    <h3 className="text-[24px]">Location</h3>
-                    <p>Address, City or Zip</p>
+            <div className="relative bg-white/10 backdrop-blur-md border-t border-white/20">
+                <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 divide-x divide-white/20">
+                    <div className="py-6 px-6 text-center">
+                        <h3 className="text-lg font-semibold">Location</h3>
+                        <p className="text-sm text-white/70 mt-1">Address, City or Zip</p>
+                    </div>
+                    <div className="py-6 px-6 text-center">
+                        <h3 className="text-lg font-semibold">Date/Duration</h3>
+                        <p className="text-sm text-white/70 mt-1">Anytime / 3 Days</p>
+                    </div>
+                    <div className="py-6 px-6 text-center">
+                        <h3 className="text-lg font-semibold">Budget</h3>
+                        <p className="text-sm text-white/70 mt-1">$0 - $3000</p>
+                    </div>
+                    <div className="py-6 px-6 text-center bg-teal-600/80">
+                        <h3 className="text-lg font-semibold">Search</h3>
+                        <p className="text-sm text-white/70 mt-1">Find your trip</p>
+                    </div>
                 </div>
-
-                <Separator variant="tertiary" orientation="vertical" />
-
-                <div>
-                    <h3 className="text-[24px]">Date/Duration</h3>
-                    <p>Anytime / 3 Days</p>
-                </div>
-
-                <Separator variant="tertiary" orientation="vertical" />
-
-                <div>
-                    <h3 className="text-[24px]">Budget</h3>
-                    <p>$0 - $3000</p>
-                </div>
-
-                <Separator variant="tertiary" orientation="vertical" />
-
-                <div>
-                    <h3 className="text-[24px]">People</h3>
-                    <p>5 - 10</p>
-                </div>
-
-                <div className="bg-cyan-500 py-2 px-4">
-                    <h3 className="text-[24px]">Search</h3>
-                </div>
-
             </div>
         </div>
     );

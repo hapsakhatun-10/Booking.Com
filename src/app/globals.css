@@ -1,1 +1,29 @@
 @import "tailwindcss";
+@import "@heroui/styles";
+
+
+.primary-gradient {
+    @apply bg-gradient-to-r from-teal-600 to-teal-500 bg-clip-text text-transparent;
+}
+
+body {
+    @apply antialiased text-gray-100 bg-gray-900;
+}
+
+::selection {
+    @apply bg-teal-600 text-white;
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    @apply bg-gray-800;
+}
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-600 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+}
